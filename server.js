@@ -2,5 +2,5 @@ const express = require('express')
 const app = express()
 
 app.get('/redirect', (req, res) => res.redirect(301, 'https://www.oneu.me/'))
-
-app.listen(80, () => console.log('Example app listening on port 3000!'))
+var port = process.env.PORT || 3000;
+app.listen(port);
